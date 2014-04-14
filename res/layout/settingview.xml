@@ -19,6 +19,7 @@
                 android:id="@+id/historyTab"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 >
                 
                 <EditText
@@ -38,7 +39,9 @@
             <LinearLayout
                 android:id="@+id/contactTab"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                 >
 
                 <EditText
                     android:id="@+id/contactSearchEditText"
@@ -59,6 +62,7 @@
                 android:id="@+id/settingTab"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                  >
 
                 
