@@ -19,8 +19,11 @@ public class Contact {
     private int age;
     private String passWord;
     
-    public Contact () {
-        
+    // this constract a contact which only has name and loginID to show it 
+    // on the screen. detail profile can be fatched from the database.
+    public Contact (String name, String loginID) {
+        this.name = name;
+        this.loginID = loginID;
     }
     
     public int getUserID() {
@@ -61,6 +64,10 @@ public class Contact {
     
     public String getIntro() {
         return intro;
+    }
+    
+    public void setIntro(String intro) {
+        this.intro = intro;
     }
     
     public String getHeadPortrait() {
