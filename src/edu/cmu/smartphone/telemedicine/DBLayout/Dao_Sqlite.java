@@ -1,4 +1,4 @@
-package edu.cmu.smartphone.telemedicine.DBLayout.copy;
+package edu.cmu.smartphone.telemedicine.DBLayout;
 
 import java.util.Formatter;
 import java.util.Locale;
