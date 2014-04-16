@@ -7,9 +7,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#fff" >
-
-        <!-- Registration Form -->
+        android:background="#ffffff" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,21 +15,6 @@
             android:orientation="vertical"
             android:padding="10dip" >
 
-            <!-- Full Name Label -->
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Full Name"
-                android:textColor="#372c24" />
-
-            <EditText
-                android:id="@+id/reg_fullname"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dip"
-                android:layout_marginTop="5dip"
-                android:singleLine="true" />
             <!-- Email Label -->
 
             <TextView
@@ -41,7 +24,6 @@
                 android:textColor="#372c24" />
 
             <EditText
-                android:id="@+id/reg_email"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dip"
@@ -56,34 +38,33 @@
                 android:textColor="#372c24" />
 
             <EditText
-                android:id="@+id/reg_password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
                 android:password="true"
                 android:singleLine="true" />
-            <!-- Register Button -->
+            <!-- Login button -->
 
             <Button
-                android:id="@+id/reg_btnRegister"
+                android:id="@+id/btnLogin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
-                android:text="Register New Account" />
-            <!-- Link to Login Screen -->
+                android:text="Login" />
+            <!-- Link to Registration Screen -->
 
             <TextView
-                android:id="@+id/reg_link_to_login"
+                android:id="@+id/link_to_register"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dip"
                 android:layout_marginTop="40dip"
                 android:gravity="center"
-                android:text="Login here"
-                android:textColor="#025f7c"
+                android:text="Register here"
+                android:textColor="#0b84aa"
                 android:textSize="20dip" />
         </LinearLayout>
-        <!-- Registration Form Ends -->
+        <!-- Login Form Ends -->
     </RelativeLayout>
 
 </ScrollView>
