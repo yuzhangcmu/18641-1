@@ -1,23 +1,10 @@
 package edu.cmu.smartphone.telemedicine.DBLayout;
 
-import java.util.Formatter;
-import java.util.Locale;
-
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.TextView;
+
 import android.widget.Toast;
 
 public class Dao_Sqlite extends ContextWrapper{
@@ -94,11 +81,9 @@ public class Dao_Sqlite extends ContextWrapper{
         try {
             // we use deleteDatabse("Database name ") method to delete database 
             // we have to pass String parameter to give the name of database
-             
             deleteDatabase(dbTeleMedicine); 
- 
-            Toast.makeText(getBaseContext(), "Databse Deleted", Toast.LENGTH_LONG)
-                    .show();
+            Toast.makeText(getBaseContext(), "Databse Deleted", Toast.LENGTH_LONG).show();
+            
         } catch (Exception e) {
  
             Log.e("Error", "Error", e);

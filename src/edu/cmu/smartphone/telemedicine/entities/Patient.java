@@ -1,14 +1,18 @@
 package edu.cmu.smartphone.telemedicine.entities;
 
 public class Patient {
-    private int userID;
+    private String userID;
     private String Symptom;
     
-    public int getUserID () {
+    public String getUserID () {
         return userID;
     }
     
     public String getSymptom() {
         return Symptom;
+    }
+    
+    public void setSymptom(String symptom) {
+       this.Symptom = symptom;  
     }
 }

@@ -1,11 +1,11 @@
 package edu.cmu.smartphone.telemedicine.entities;
 
 public class Doctor {
-    private int userID;
+    private String userID;
     private String department;
     private String title;
     
-    public int getUserID() {
+    public String getUserID() {
         return userID;
     }
     
@@ -15,6 +15,10 @@ public class Doctor {
     
     public String getTitle() {
         return title;
+    }
+    
+    public void setDepartment(String department) {
+        this.department = department;
     }
 }
 

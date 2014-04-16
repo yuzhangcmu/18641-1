@@ -6,12 +6,16 @@ public class ChatRecord {
     private String message;
     private Boolean status;
     private Date date;
-    private int fromUserID;
-    private int toUserID;
+    private String chatUserID;
+    private Boolean direction;
     private int messageType;
     
     public String getMessage() {
         return message;
+    }
+    
+    public boolean getDirection() {
+        return direction;
     }
     
     public void setMessage(String message) {
@@ -30,13 +34,10 @@ public class ChatRecord {
         return date;
     }
     
-    public int getFromUserID() {
-        return fromUserID;
+    public String getChatUserID() {
+        return chatUserID;
     }
     
-    public int getToUserID() {
-        return toUserID;
-    }
     
     public int getMessageType() {
         return messageType;

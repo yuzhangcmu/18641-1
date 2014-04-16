@@ -1,7 +1,6 @@
 package edu.cmu.smartphone.telemedicine.entities;
 
 public class Contact {
-    private int userID;
     private String type;
     private String email;
     private String phone;
@@ -11,7 +10,7 @@ public class Contact {
     private String city;
     
     private String name;
-    private String loginID;
+    private String userID;
     
     private String intro;
     private String headPortrait; // store the picture of the user.
@@ -23,10 +22,10 @@ public class Contact {
     // on the screen. detail profile can be fatched from the database.
     public Contact (String name, String loginID) {
         this.name = name;
-        this.loginID = loginID;
+        this.userID = loginID;
     }
     
-    public int getUserID() {
+    public String getUserID() {
         return userID;
     }
     
@@ -56,10 +55,6 @@ public class Contact {
     
     public String getName() {
         return name;
-    }
-    
-    public String getLoginID() {
-        return loginID;
     }
     
     public String getIntro() {
