@@ -4,6 +4,13 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="false" >
+    </supports-screens>
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
@@ -21,6 +28,20 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="edu.cmu.smartphone.telemedicine.AddActivity" >
+        </activity>
+        <activity android:name="edu.cmu.smartphone.telemedicine.ChatActivity" >
+        </activity>
+        <activity android:name="edu.cmu.smartphone.telemedicine.ContactActivity" >
+        </activity>
+        <activity android:name="edu.cmu.smartphone.telemedicine.InfoActivity" >
+        </activity>
+        <activity android:name="edu.cmu.smartphone.telemedicine.LoginActivity" >
+        </activity>
+        <activity android:name="edu.cmu.smartphone.telemedicine.RegisterActivity" >
+        </activity>
+        <activity android:name="edu.cmu.smartphone.telemedicine.SettingActivity" >
         </activity>
     </application>
 

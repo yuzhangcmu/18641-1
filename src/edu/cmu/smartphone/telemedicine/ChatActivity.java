@@ -1,35 +1,37 @@
 package edu.cmu.smartphone.telemedicine;
 
-
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 
-// Loading Splash View
-public class MainActivity extends Activity {
+public class ChatActivity extends Activity {
 
-	Button welcomeButton;
+	EditText chatInputEditText;
+	Button chatSendButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.splashview);
+		setContentView(R.layout.chatview);
 		
-		welcomeButton = (Button)findViewById(R.id.welcomeButton);
+		chatInputEditText = (EditText)findViewById(R.id.chatInputEditText);
+		chatSendButton = (Button)findViewById(R.id.chatSendButton);
 		
-		welcomeButton.setOnClickListener(new OnClickListener() {
+		chatSendButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(MainActivity.this,
-						RegisterActivity.class);
-				startActivity(intent);
+				
 			}
 		});
+		
+
+		
+		
 	}
 
 }
