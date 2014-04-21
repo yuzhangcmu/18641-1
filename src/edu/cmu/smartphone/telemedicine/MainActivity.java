@@ -31,17 +31,21 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				
 				ParseUser currentUser = ParseUser.getCurrentUser();
-				if (currentUser != null) {
-				  // do stuff with the user
-					Intent intent = new Intent(MainActivity.this,
-			    			ContactActivity.class);
-					startActivity(intent);
-				} else {
-				  // show the signup or login screen
-					Intent intent = new Intent(MainActivity.this,
-							RegisterActivity.class);
-					startActivity(intent);
-				}
+//				if (currentUser != null) {
+//				  // do stuff with the user
+//					Intent intent = new Intent(MainActivity.this,
+//			    			ContactActivity.class);
+//					startActivity(intent);
+//				} else {
+//				  // show the signup or login screen
+//					Intent intent = new Intent(MainActivity.this,
+//							RegisterActivity.class);
+//					startActivity(intent);
+//				}
+				
+				Intent intent = new Intent(MainActivity.this,
+						RegisterActivity.class);
+				startActivity(intent);
 			}
 		});
 		

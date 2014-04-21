@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.ParseException;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
@@ -40,7 +41,7 @@ public class RegisterActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				String username = usernameEditText.getText().toString();
+				final String username = usernameEditText.getText().toString();
 				String fullname = fullnameEditText.getText().toString();
 				String email = emailEditText.getText().toString();
 				String password = passwordEditText.getText().toString();
@@ -60,7 +61,11 @@ public class RegisterActivity extends Activity {
 				    	Intent intent = new Intent(RegisterActivity.this,
 				    			ContactActivity.class);
 						startActivity(intent);
-				    	
+						
+						// Create a new Parse table
+						ParseObject newUserTable = new ParseObject(username);
+						newUserTable.put("friend_username", username);		// A user is his own friend in the beginning
+						newUserTable.saveInBackground();
 				    } else {
 				      // Sign up didn't succeed. Look at the ParseException
 				      // to figure out what went wrong
