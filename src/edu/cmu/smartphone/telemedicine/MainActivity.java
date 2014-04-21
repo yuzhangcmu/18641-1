@@ -49,7 +49,6 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		
 //		ParseObject testObject = new ParseObject("TestObject");
 //		testObject.put("foo2", "bar2");
 //		testObject.saveInBackground();
