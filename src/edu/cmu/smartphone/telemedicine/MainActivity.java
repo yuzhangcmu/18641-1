@@ -8,6 +8,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
+
 // Loading Splash View
 public class MainActivity extends Activity {
 
@@ -24,12 +29,28 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent(MainActivity.this,
-						RegisterActivity.class);
-				startActivity(intent);
+				
+				ParseUser currentUser = ParseUser.getCurrentUser();
+				if (currentUser != null) {
+				  // do stuff with the user
+					Intent intent = new Intent(MainActivity.this,
+			    			ContactActivity.class);
+					startActivity(intent);
+				} else {
+				  // show the signup or login screen
+					Intent intent = new Intent(MainActivity.this,
+							RegisterActivity.class);
+					startActivity(intent);
+				}
 			}
 		});
+		
+		
+//		ParseObject testObject = new ParseObject("TestObject");
+//		testObject.put("foo2", "bar2");
+//		testObject.saveInBackground();
+
+		
 	}
 
 }
